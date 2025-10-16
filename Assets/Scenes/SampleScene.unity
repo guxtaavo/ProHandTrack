@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 263142987}
   - component: {fileID: 263142986}
   - component: {fileID: 263142989}
+  - component: {fileID: 263142990}
   m_Layer: 0
   m_Name: '[BuildingBlock] MR Utility Kit'
   m_TagString: Untagged
@@ -268,8 +269,8 @@ MonoBehaviour:
     <TrackableAdded>k__BackingField:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 263142989}
-          m_TargetAssemblyTypeName: TrackablesManager, Assembly-CSharp
+        - m_Target: {fileID: 263142990}
+          m_TargetAssemblyTypeName: MultiPrefabTrackablesManager, Assembly-CSharp
           m_MethodName: OnTrackableAdded
           m_Mode: 0
           m_Arguments:
@@ -283,8 +284,8 @@ MonoBehaviour:
     <TrackableRemoved>k__BackingField:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 263142989}
-          m_TargetAssemblyTypeName: TrackablesManager, Assembly-CSharp
+        - m_Target: {fileID: 263142990}
+          m_TargetAssemblyTypeName: MultiPrefabTrackablesManager, Assembly-CSharp
           m_MethodName: OnTrackableRemoved
           m_Mode: 0
           m_Arguments:
@@ -342,6 +343,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedObjectPrefab: {fileID: 5806860414203550091, guid: cac09a1ab8ba84e508e583fd164c8464, type: 3}
+  trackedInfoPrefab: {fileID: 0}
+  trackedBoundsPrefab: {fileID: 0}
+--- !u!114 &263142990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263142985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624ad622ff12f08448ad8f6eda641ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisPrefab: {fileID: 5806860414203550091, guid: 30028d63e5d6fbb4c8f48c7c2a92f299, type: 3}
+  arrowPrefab: {fileID: 919132149155446097, guid: 08a988424b861a649b9bd70f8583a6f9, type: 3}
 --- !u!1 &270509862
 GameObject:
   m_ObjectHideFlags: 0
