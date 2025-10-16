@@ -25,3 +25,8 @@ This project is a hands-on guide for:
 * Setting up and using the **Meta XR SDK**.  
 * Reading and tracking **QR Codes** in a real-world environment.  
 * Mapping the physical prosthesis position into the virtual space. 
+
+---
+
+## 📚 Reference  
+🎥 Tutorial: [YouTube - Meta XR QR Code Tracking](https://www.youtube.com/watch?v=OPgn_5V4qJ0&lc=Ugzwv-Sbjzcra3qYu2t4AaABAg.AOIheIHsi_XAOIpmd5kSVb)
