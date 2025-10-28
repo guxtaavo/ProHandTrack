@@ -7,12 +7,14 @@ using UnityEngine.Serialization;
 public class TrackablesManager : MonoBehaviour
 {
     [SerializeField] private GameObject trackedObjectPrefab;
-    [SerializeField] private GameObject trackedInfoPrefab;
-    [SerializeField] private GameObject trackedBoundsPrefab;
+    //[SerializeField] private GameObject trackedInfoPrefab;
+    //[SerializeField] private GameObject trackedBoundsPrefab;
     
     public void OnTrackableAdded(MRUKTrackable trackable)
     {
-        SpatialLogger.Instance.LogInfo($"Trackable of type {trackable.TrackableType} added");
+        Debug.Log($"Trackable of type {trackable.TrackableType} added");
+        Instantiate(trackedObjectPrefab, trackable.transform);
+        /*SpatialLogger.Instance.LogInfo($"Trackable of type {trackable.TrackableType} added");
         var trackedObjectInstance = Instantiate(trackedObjectPrefab, trackable.transform);
         
         var trackedBoundsInstance = Instantiate(trackedBoundsPrefab, trackedObjectInstance.transform);
@@ -33,11 +35,13 @@ public class TrackablesManager : MonoBehaviour
             trackedBoundsInstance.transform.localScale = trackable.VolumeBounds.Value.size;
             trackedBoundsInstance.transform.localPosition = Vector3.zero;
         }
+        */
     }
 
     public void OnTrackableRemoved(MRUKTrackable trackable)
     {
-        SpatialLogger.Instance.LogInfo($"Trackable removed: {trackable.name}");
+        Debug.Log($"Trackable of type {trackable.TrackableType} removed");
+        //SpatialLogger.Instance.LogInfo($"Trackable removed: {trackable.name}");
         Destroy(trackable.gameObject);
     }
 }
